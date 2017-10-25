@@ -6,7 +6,7 @@ var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: APP_DIR + '/index.js',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './src/client'
@@ -29,22 +29,23 @@ var config = {
                 //resolve-url-loader may be chained before sass-loader if necessary
                 use: ['css-loader', 'sass-loader']
             })
-            // use: [{
-            //     loader: "style-loader"
-            // }, {
-            //     loader: "css-loader" 
-            // }, {
-            //     loader: "sass-loader"
-            // }]
+        },
+        {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: [
+              'file-loader'
+            ]
+        },
+        {
+            test: /\.(woff|woff2|eot|ttf|otf)$/,
+            use: [
+              'file-loader'
+            ]
         }
     ]
   },
   plugins: [
     new ExtractTextPlugin('style.css')
-    //if you want to pass in options, you can do so:
-    //new ExtractTextPlugin({
-    //  filename: 'style.css'
-    //})
   ]
 };
 

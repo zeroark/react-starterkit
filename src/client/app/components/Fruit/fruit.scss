@@ -1,0 +1,16 @@
+h1, img {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+.fruit {
+    padding: 15px 0;
+    text-align: center;
+}
+.fruit__image {
+    max-height: 100px;
+}
+.fruit__name {
+    color: #fff;
+    padding-top: 10px;
+}

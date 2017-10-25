@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../images/grave.svg'
 
 class AwesomeComponent extends React.Component {
 
@@ -18,6 +19,7 @@ class AwesomeComponent extends React.Component {
       <div>
         Likes : <span>{this.state.likesCount}</span>
         <div><button onClick={this.onLike}>Like Me</button></div>
+        <img src={img} alt="fruta" />
       </div>
     );
   }
