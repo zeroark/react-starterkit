@@ -4,11 +4,13 @@ h1, img {
     vertical-align: top;
 }
 .fruit {
+    display: block;
     padding: 15px 0;
     text-align: center;
+    text-decoration: none;
 }
 .fruit__image {
-    max-height: 100px;
+    max-height: 75px;
 }
 .fruit__name {
     color: #fff;

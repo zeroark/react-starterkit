@@ -16,8 +16,10 @@ class FruitsList extends React.Component {
         {this.state.fruits.map(function(fruit, index){
             return (
                 <Fruit key={index}
+                       id={fruit.id}
                        image={`./app/components/FruitsList/${fruit.name}.svg`}
-                       name={fruit.name} />
+                       name={fruit.name}
+                       description={fruit.description} />
             )
         })}
       </div>
